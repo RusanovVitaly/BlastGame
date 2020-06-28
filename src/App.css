@@ -1,38 +1,161 @@
+@font-face {
+  font-family: Marvin;
+  src: url('/fonts/16103.otf');
+}
+*{
+  font-family: Marvin;
+  font-size: 30px;
+  color: white;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper{
+  background-image: url("/images/background.png");
+  padding: 25px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-red{
+  background-image: url("/images/Buttons/buttonRed.png");
+  background-size: 100%;
+  background-position: center;
+  border: none;
+  height: 130px;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  transition: 0.3s all;
 }
+.button-red:hover{
+  transform: scale(1.1,1.1);
+}
+.overlay-wrapper{
+  position: absolute;
+  width: 100%;
+  background-color: #3e5a5a8c;
+  height: 100%;
+  color: black;
+  z-index: 3;
+}
+.overlay{
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 33%;
+}
+.side-bar_moves{
+  display: flex;
+  height: 200px;
+  width: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("/images/movesbg.png");
+}
+.side-bar_moves p{
+  margin: auto;
+}
+.side-bar_points{
+  text-align: center;
+  display: flex;
+  justify-content: center;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 150px;
+  width: 250px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("/images/countfield.png");
+}
+.status-bar{
+  height: 130px;
+  width: 80%;
+  margin: 0 auto;
+  background-image: url("/images/header.png");
+
+  background-position-x: center;
+  background-size: cover;
+  background-position-y: bottom;
+}
+.tile-image{
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.tile-image:hover{
+  transform: scale(1.1,1.1);
+}
+.blue{
+  background-image: url("/images/blocks/blue.png");
+}
+.purple{
+  background-image: url("/images/blocks/purple.png");
+}
+.red{
+  background-image: url("/images/blocks/red.png");
+}
+.yellow{
+  background-image: url("/images/blocks/yellow.png");
+}
+.green{
+  background-image: url("/images/blocks/green.png");
+}
+.bonus_name{
+  background-image: url("/images/bonusfiled.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.bonus_name p{
+  align-self: center;
+  font-size: 20px;
+}
+.bonus{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 250px;
+  height: 280px;
+  background-image: url("/images/bonusbg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bonus_image img{
+  width: 100px;
+}
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/images/CountBg.png");
+  min-width: 400px;
+  width: 30%;
+  height: 450px;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+
+}
+@keyframes destr {
+  from{
+    transform: scale(1,1);
+  }
+  to{
+    transform: scale(0.7,0.7);
+  }
+}
+.destroy{
+  animation: destr 1s ease-in-out ;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
